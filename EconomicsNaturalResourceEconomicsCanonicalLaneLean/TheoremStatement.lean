@@ -49,11 +49,16 @@ theorem theorem_statement_certificate_lane_checked :
 
 theorem classical_source_boundary_carried_checked :
     ClassicalSourceBoundaryCarried := by
-  exact And.intro rfl rfl
+  constructor
+  · rfl
+  · rfl
 
 theorem manifold_constrained_theorem_closed_checked :
     ManifoldConstrainedTheoremClosed := by
-  exact And.intro rfl (And.intro rfl rfl)
+  refine And.intro ?_ (And.intro ?_ ?_)
+  · rfl
+  · rfl
+  · rfl
 
 theorem theorem_layer_internalized_checked :
     TheoremLayerInternalized := by
