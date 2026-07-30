@@ -1,0 +1,19 @@
+import canonicalLaneMathlib.AdmissibleClass
+import EconomicsNaturalResourceEconomicsCanonicalLaneLean.ResourceExtractionBridge
+import EconomicsNaturalResourceEconomicsCanonicalLaneLean.RenewableResourceSteadyState
+import EconomicsNaturalResourceEconomicsCanonicalLaneLean.NonrenewableResourceHotelling
+import EconomicsNaturalResourceEconomicsCanonicalLaneLean.FisheryRegulationGame
+import EconomicsNaturalResourceEconomicsCanonicalLaneLean.ClimatePolicySocialCost
+
+namespace HautevilleHouse
+namespace EconomicsNaturalResourceEconomicsCanonicalLaneLean
+
+def ConstrainedNaturalResourceClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_natural_resource_endgame (A : AdmissibleClass) :
+    ConstrainedNaturalResourceClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end EconomicsNaturalResourceEconomicsCanonicalLaneLean
+end HautevilleHouse
